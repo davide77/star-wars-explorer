@@ -1,0 +1,51 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/functions' as fn;
+@use '../abstracts/mixins' as mix;
+
+.character-grid {
+    display: grid;
+    gap: fn.get-spacing('4');
+    grid-template-columns: 1fr;
+
+    @include mix.respond-to('sm') {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mix.respond-to('md') {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.character-card {
+    background-color: fn.get-color('white');
+    color: fn.get-color('text');
+    padding: fn.get-spacing('4');
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+
+    &__name {
+        font-size: fn.get-font-size('xl');
+        color: fn.get-color('gray', '900');
+        margin-bottom: fn.get-spacing('4');
+    }
+
+    &__detail {
+        display: flex;
+        justify-content: space-between;
+        padding: fn.get-spacing('2') 0;
+        border-bottom: 1px solid fn.get-color('gray', '200');
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        span:first-child {
+            color: fn.get-color('gray', '600');
+        }
+    }
+}

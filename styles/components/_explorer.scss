@@ -1,0 +1,44 @@
+// src/styles/components/_explorer.scss
+@use '../abstracts/variables' as v;
+@use '../abstracts/functions' as fn;
+@use '../abstracts/mixins' as mix;
+@use 'sass:map';
+
+.app {
+    min-height: 100vh;
+    background-color: fn.get-color('background');
+}
+
+.explorer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: fn.get-spacing('4');
+
+    &__header {
+        @include mix.flex(space-between, center);
+        flex-wrap: wrap;
+        gap: fn.get-spacing('4');
+        margin-bottom: fn.get-spacing('6');
+
+        h1 {
+            color: fn.get-color('text');
+            font-size: fn.get-font-size('4xl');
+            font-weight: 700;
+        }
+
+        p {
+            color: fn.get-color('gray', '600');
+        }
+    }
+
+    &__controls {
+        @include mix.flex(flex-start, center);
+        gap: fn.get-spacing('4');
+        margin-bottom: fn.get-spacing('6');
+        flex-wrap: wrap;
+
+        @include mix.respond-to('md') {
+            flex-wrap: nowrap;
+        }
+    }
+}

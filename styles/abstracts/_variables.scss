@@ -1,0 +1,48 @@
+$colors: (
+    'primary': #3498db,
+    'secondary': #2c3e50,
+    'background': #f5f6fa,
+    'white': #ffffff,
+    'text': #2c3e50,
+    'error': (
+        'light': #fee2e2,
+        'base': #dc2626,
+        'dark': #b91c1c),
+    'gray': (
+        '100': #f7fafc,
+        '200': #edf2f7,
+        '300': #e2e8f0,
+        '400': #cbd5e0,
+        '500': #a0aec0,
+        '600': #718096,
+        '700': #4a5568,
+        '800': #2d3748,
+        '900': #1a202c)
+);
+
+$spacing: (
+    '1': 0.25rem,
+    '2': 0.5rem,
+    '3': 0.75rem,
+    '4': 1rem,
+    '5': 1.5rem,
+    '6': 2rem,
+    '8': 3rem
+);
+
+$font-sizes: (
+    'sm': 0.875rem,
+    'base': 1rem,
+    'lg': 1.125rem,
+    'xl': 1.25rem,
+    '2xl': 1.5rem,
+    '3xl': 1.875rem,
+    '4xl': 2.25rem
+);
+
+$breakpoints: (
+    'sm': 576px,
+    'md': 768px,
+    'lg': 992px,
+    'xl': 1200px
+);
