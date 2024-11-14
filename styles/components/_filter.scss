@@ -1,0 +1,37 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/functions' as fn;
+@use '../abstracts/mixins' as mix;
+
+.filter {
+    position: relative;
+
+    &__select {
+        appearance: none;
+        padding: fn.get-spacing('2') fn.get-spacing('2') fn.get-spacing('2') fn.get-spacing('8');
+        border: 1px solid fn.get-color('gray', '300');
+        border-radius: 4px;
+        background-color: fn.get-color('white');
+        cursor: pointer;
+        min-width: 150px;
+        @include mix.transition;
+
+        &:focus {
+            outline: none;
+            border-color: fn.get-color('primary');
+            box-shadow: 0 0 0 2px rgba(fn.get-color('primary'), 0.1);
+        }
+
+        &:hover {
+            border-color: fn.get-color('primary');
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        left: fn.get-spacing('2');
+        top: 50%;
+        transform: translateY(-50%);
+        color: fn.get-color('gray', '400');
+        pointer-events: none;
+    }
+}

@@ -198,4 +198,8 @@ const filteredCharacters = characters.filter(character => {
 
 - The project uses the public SWAPI API
 - Development focused on clean code and maintainability
+<<<<<<< HEAD
 - Emphasis on modular and reusable components
+=======
+- Emphasis on modular and reusable components
+>>>>>>> 66f1a928f2d5fb42398014dd53e8e88fb268db66

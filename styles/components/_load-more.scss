@@ -1,0 +1,28 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/functions' as fn;
+@use '../abstracts/mixins' as mix;
+@use 'sass:color';
+
+.load-more {
+    text-align: center;
+    margin-top: fn.get-spacing('6');
+
+    &__button {
+        background-color: fn.get-color('primary');
+        color: fn.get-color('white');
+        padding: fn.get-spacing('3') fn.get-spacing('6');
+        border-radius: 4px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+
+        &:hover:not(:disabled) {
+            background-color: color.adjust(fn.get-color('primary'), $lightness: -10%);
+        }
+
+        &:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+    }
+}
