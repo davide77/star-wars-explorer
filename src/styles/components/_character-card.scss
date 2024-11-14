@@ -1,0 +1,54 @@
+// src/styles/components/_character-card.scss
+@use '../abstracts/variables' as v;
+@use '../abstracts/functions' as fn;
+@use '../abstracts/mixins' as mix;
+
+.character-card {
+    background-color: fn.get-color('white');
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+
+    &__image {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        background-color: fn.get-color('gray', '100');
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    &__name {
+        padding: fn.get-spacing('4');
+        font-size: fn.get-font-size('xl');
+        color: fn.get-color('text');
+        margin: 0;
+        text-align: center;
+    }
+
+    &__detail {
+        padding: fn.get-spacing('2') fn.get-spacing('4');
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid fn.get-color('gray', '200');
+
+        span:first-child {
+            color: fn.get-color('gray', '600');
+            font-weight: 500;
+        }
+    }
+}

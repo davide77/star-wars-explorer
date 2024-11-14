@@ -1,0 +1,24 @@
+// src/styles/base/_typography.scss
+@use 'sass:map';
+@use '../abstracts/variables' as vars;
+@use '../abstracts/functions' as fn;
+
+h1,
+.h1 {
+    font-size: fn.get-font-size('4xl');
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: fn.get-spacing('4');
+}
+
+h2,
+.h2 {
+    font-size: fn.get-font-size('xl');
+    line-height: 1.3;
+    font-weight: 600;
+    margin-bottom: fn.get-spacing('3');
+}
+
+p {
+    margin-bottom: fn.get-spacing('4');
+}

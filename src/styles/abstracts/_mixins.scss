@@ -1,0 +1,26 @@
+// src/styles/abstracts/_mixins.scss
+@use 'sass:map';
+@use './variables' as v;
+
+@mixin respond-to($breakpoint) {
+    @if map.has-key(v.$breakpoints, $breakpoint) {
+        @media (min-width: map.get(v.$breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+}
+
+@mixin flex($justify: flex-start, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin grid($columns: 1) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+}
+
+@mixin transition($properties: all, $duration: 0.2s, $timing: ease) {
+    transition: $properties $duration $timing;
+}
