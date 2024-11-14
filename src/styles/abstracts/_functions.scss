@@ -13,6 +13,10 @@
     @return map.get(vars.$spacing, $key);
 }
 
+@function get-card-image($key) {
+    @return map.get(vars.$card-images, $key);
+}
+
 @function get-font-size($key) {
     @return map.get(vars.$font-sizes, $key);
 }
